@@ -42,7 +42,7 @@ def main():
     )
 
     # initialize server
-    mcp = FastMCP(name="Outlook MCP", auth=auth)
+    mcp = FastMCP(name="Outlook MCP", auth=auth, stateless_http=True)
 
     @mcp.resource(
         "config://whoami",
