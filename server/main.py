@@ -69,7 +69,7 @@ def main():
 
     # start the server
     mcp.run(
-        transport="streamable-http",
+        transport="sse",
         host=config.get("host"),
         port=int(config.get("port")),
     )
