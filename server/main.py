@@ -29,6 +29,7 @@ def main():
         tenant_id=config.get("azure_tenant_id"),
         client_secret=config.get("azure_client_secret"),
         base_url=config.get("base_url"),
+        redirect_path=config.get("azure_redirect_url"),
         required_scopes=[
             "User.Read",
             "email",
@@ -67,7 +68,11 @@ def main():
     # register all tools
 
     # start the server
-    mcp.run("streamable-http")
+    mcp.run(
+        transport="streamable-http",
+        host=config.get("host"),
+        port=int(config.get("port")),
+    )
 
 
 if __name__ == "__main__":

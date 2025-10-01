@@ -8,3 +8,4 @@ dependencies = [
     "fastmcp",
     "msgraph-sdk",
     "beautifulsoup4",
+]

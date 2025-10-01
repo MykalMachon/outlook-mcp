@@ -1,9 +1,0 @@
-{
-	"servers": {
-		"outlook-mcp": {
-			"url": "http://localhost:8000/mcp",
-			"type": "http"
-		}
-	},
-	"inputs": []
-}
