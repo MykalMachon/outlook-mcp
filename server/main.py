@@ -16,6 +16,7 @@ from utils.auth import PatchedAzureProvider, get_graph_client
 from resources.mail import setup_mail_resources
 from resources.calendar import setup_calendar_resources
 from tools.mail import setup_mail_tools
+from tools.calendar import setup_calendar_tools
 
 
 load_dotenv()
@@ -68,6 +69,7 @@ def main():
     # * TOOLS
     # register all tools
     setup_mail_tools(mcp=mcp)
+    setup_calendar_tools(mcp=mcp)
 
     # start the server
     mcp.run(
